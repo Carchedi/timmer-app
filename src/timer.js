@@ -7,6 +7,8 @@ function Timer({maxRange}){
     useEffect (()=>{ 
          if(counter > 0){
             setTimeout(()=>setCounter(counter-1),100);
+         }else{
+            setCounter(100);
          }
  
     },[counter])
