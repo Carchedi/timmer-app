@@ -8,7 +8,7 @@ function Timer({maxRange}){
          if(counter > 0){
             setTimeout(()=>setCounter(counter-1),100);
          }else{
-            setCounter(100);
+            setCounter(maxRange);
          }
  
     },[counter])
@@ -17,7 +17,7 @@ function Timer({maxRange}){
             if(counter > 9){
                 return ( 
                     /*uncomment to blink effect*/
-                    /*<Blink color='red' text={(Math.round(counter * 10) / 100).toFixed(1)} fontSize='20'/> */
+                   
                     <div>
                         <span  style={{ color: 'red' }}>0</span>
                         <span  style={{ color: 'red' }}>{(Math.round(counter * 10) / 100).toFixed(1)}</span>   
